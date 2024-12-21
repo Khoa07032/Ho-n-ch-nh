@@ -111,7 +111,8 @@ const Header = () => {
   const openFilter = () => {
     context?.setIsOpenFilters(!context?.isOpenFilters);
   };
-
+  
+  useEffect(()=>{ context.getCartData()},[context])
   return (
     <>
       <Button className="gotoTop" ref={gotoTop} onClick={gotoTopScroll}>
